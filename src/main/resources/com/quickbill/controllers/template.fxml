@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quickbill.controllers.TemplateController">
+   <children>
+      <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+         <children>
+            <WebView fx:id="webView" maxHeight="-1.0" maxWidth="-1.0" minHeight="500.0" minWidth="400.0" prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="TOP_CENTER" spacing="30.0">
+         <children>
+            <Button fx:id="loginButton11" mnemonicParsing="false" onMouseClicked="#addInvoice" prefWidth="116.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #023E8A; -fx-border-width: 3px;" text="Zapisz" textFill="#023e8a">
+               <font>
+                  <Font name="Lato Semibold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="loginButton1" mnemonicParsing="false" onMouseClicked="#printInvoice" prefHeight="36.0" prefWidth="116.0" style="-fx-background-color: #023E8A; -fx-border-radius: 20px;" text="Drukuj" textFill="WHITE" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Lato Semibold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets bottom="30.0" top="30.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>

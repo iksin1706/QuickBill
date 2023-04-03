@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/quickbill</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password"></property>
+        <!-- Opcja będzie wypisywać zapytania SQL w konsoli -->
+        <property name="hibernate.show_sql">true</property>
+        <!-- scieżka do klasy sterownika -->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <!-- Dialekt bazy danych - silniki bazodanowe różnią się nieznacznie składnią, typami danych, funkcjami -->
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <!-- Opcja umożliwia zdefiniowanie zachowania przy łączeniu z bazą danych. create-drop usunie tabele a następnie utworzy je na nowo -->
+        <property name="hbm2ddl.auto">update</property>
+        <mapping class="com.quickbill.models.User"></mapping>
+        <mapping class="com.quickbill.models.Invoice"></mapping>
+        <mapping class="com.quickbill.models.InvoiceItem"></mapping>
+        <mapping class="com.quickbill.models.Address"></mapping>
+        <mapping class="com.quickbill.models.Customer"></mapping>
+    </session-factory>
+</hibernate-configuration>

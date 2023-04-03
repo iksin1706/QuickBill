@@ -1,0 +1,13 @@
+.chart-series-area {
+    -fx-fill: blue;
+}
+#lineChart{
+    CHART_COLOR_1: blue;
+    CHART_COLOR_1_TRANS_20: blue;
+}
+#background{
+    -fx-background-image: url("../img/loginbackground.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}

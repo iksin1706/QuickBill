@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quickbill.controllers.ItemsController">
+   <children>
+      <Label fx:id="header" prefHeight="45.0" prefWidth="900.0" text="Dodaj towary/usługi" textFill="#0096c7">
+         <font>
+            <Font name="Lato Semibold" size="32.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Label>
+      <Rectangle height="3.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="834.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startY="0.4312796208530806">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color green="0.5882353186607361" blue="0.7803921699523926" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <VBox.margin>
+            <Insets bottom="20.0" />
+         </VBox.margin>
+      </Rectangle>
+      <HBox prefHeight="45.0" spacing="20.0">
+         <children>
+            <VBox prefHeight="126.0" prefWidth="196.0">
+               <children>
+                  <Label text="Nazwa towaru/usługi">
+                     <font>
+                        <Font name="Lato Semibold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="itemName">
+                     <font>
+                        <Font name="Lato Semibold" size="12.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox prefHeight="126.0" prefWidth="196.0">
+               <children>
+                  <Label text="Wartość netto">
+                     <font>
+                        <Font name="Lato Semibold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="itemPrice">
+                     <font>
+                        <Font name="Lato Semibold" size="12.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox prefHeight="53.0" prefWidth="73.0">
+               <children>
+                  <Label text="Ilość">
+                     <font>
+                        <Font name="Lato Semibold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="itemAmout" prefHeight="23.0">
+                     <font>
+                        <Font name="Lato Semibold" size="12.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox prefHeight="126.0" prefWidth="196.0">
+               <children>
+                  <Label text="Stawka VAT">
+                     <font>
+                        <Font name="Lato Semibold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="taxPercentage" prefHeight="30.0">
+                     <font>
+                        <Font name="Lato Semibold" size="12.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+            <AnchorPane prefHeight="26.0">
+               <children>
+                  <Button fx:id="loginButton" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" layoutX="1.0" layoutY="22.0" mnemonicParsing="false" onMouseClicked="#addItem" prefHeight="23.0" prefWidth="111.0" style="-fx-background-color: #023E8A;" text="Dodaj" textFill="WHITE">
+                     <font>
+                        <Font name="Lato Semibold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+         <VBox.margin>
+            <Insets bottom="20.0" />
+         </VBox.margin>
+      </HBox>
+      <TableView fx:id="itemsTable" editable="true" VBox.vgrow="ALWAYS">
+         <columns>
+            <TableColumn fx:id="columnName" maxWidth="200.0" minWidth="100.0" prefWidth="197.0" text="Nazwa towaru/usługi" />
+            <TableColumn fx:id="columnPrice" maxWidth="200.0" minWidth="100.0" prefWidth="106.0" text="Wartość netto" />
+            <TableColumn fx:id="columnAmount" maxWidth="200.0" minWidth="50.0" prefWidth="55.0" text="Ilość" />
+            <TableColumn fx:id="columnTaxPercentage" maxWidth="200.0" minWidth="50.0" prefWidth="100.0" text="Stawka VAT" />
+            <TableColumn fx:id="columnPriceNetto" editable="false" maxWidth="200.0" minWidth="100.0" prefWidth="105.0" text="Cena netto" />
+            <TableColumn fx:id="columnPriceCost" editable="false" maxWidth="200.0" minWidth="100.0" prefWidth="136.0" text="Kwota VAT" />
+            <TableColumn fx:id="columnPriceBrutto" editable="false" maxWidth="200.0" minWidth="100.0" prefWidth="78.0" text="Cena brutto" />
+            <TableColumn fx:id="columnDelete" editable="false" maxWidth="100.0" minWidth="70.0" prefWidth="70.0" style="-fx-alignment: CENTER;" text="Usuń" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label fx:id="infoLabel" style="visibility: false;" text="Maksymalna ilość pozycji na fakturze to 100 " textFill="RED">
+         <font>
+            <Font name="Trebuchet MS" size="12.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="50.0" spacing="20.0">
+         <children>
+            <Button fx:id="addInvoiceButton" mnemonicParsing="false" onMouseClicked="#addInvoice" prefHeight="36.0" prefWidth="126.0" style="-fx-background-color: #023E8A;" text="Zapisz fakture" textFill="WHITE">
+               <font>
+                  <Font name="Lato Semibold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="generatePdfButton" mnemonicParsing="false" onMouseClicked="#generatePdf" prefHeight="36.0" prefWidth="135.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #023E8A; -fx-border-width: 3px;" text="Generuj PDF" textFill="#023e8a">
+               <font>
+                  <Font name="Lato Semibold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

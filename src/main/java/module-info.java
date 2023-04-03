@@ -1,0 +1,33 @@
+module com.example.quickbill {
+    requires javafx.controls;
+    requires javafx.fxml;
+    requires javafx.web;
+    requires java.naming;
+    requires org.controlsfx.controls;
+    requires com.dlsc.formsfx;
+    requires validatorfx;
+    requires org.kordamp.ikonli.javafx;
+    requires org.kordamp.bootstrapfx.core;
+    requires eu.hansolo.tilesfx;
+    requires itextpdf;
+    requires html2pdf;
+    requires org.hibernate.orm.core;
+    requires java.persistence;
+    requires sqlite.dialect;
+    requires  org.xerial.sqlitejdbc;
+    requires org.apache.pdfbox;
+    requires java.desktop;
+    requires fontawesomefx;
+    requires jbcrypt;
+    requires mysql.connector.java;
+    opens com.quickbill to javafx.fxml;
+    exports com.quickbill;
+    exports com.quickbill.models;
+    opens com.quickbill.models to javafx.fxml, org.hibernate.orm.core;
+    exports com.quickbill.controllers;
+    opens com.quickbill.controllers to javafx.fxml;
+    exports com.quickbill.services;
+    opens com.quickbill.services to javafx.fxml;
+    exports com.quickbill.helpers;
+    opens com.quickbill.helpers to javafx.fxml;
+}

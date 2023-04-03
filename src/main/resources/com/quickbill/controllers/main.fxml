@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<StackPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quickbill.controllers.MainController">
+   <children>
+      <HBox prefWidth="1366.0">
+         <children>
+            <VBox prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: #03045E;">
+               <children>
+                  <ImageView fitHeight="145.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/background.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="50.0" top="50.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Button fx:id="main" alignment="BASELINE_LEFT" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#changeToDashboard" prefHeight="80.0" prefWidth="300.0" style="-fx-background-color: #023E8A;" text=" Strona główna" textFill="WHITE">
+                     <font>
+                        <Font name="Lato Bold" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <opaqueInsets>
+                        <Insets right="10.0" />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="newInvoice" alignment="BASELINE_LEFT" mnemonicParsing="false" onMouseClicked="#changeToNewInvoice" prefHeight="80.0" prefWidth="300.0" style="-fx-background-color: #01014A;" text=" Nowa faktura" textFill="WHITE">
+                     <font>
+                        <Font name="Lato Bold" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets bottom="10.0" left="50.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="myInvoices" alignment="BASELINE_LEFT" mnemonicParsing="false" onMouseClicked="#changeToMyInvoices" prefHeight="80.0" prefWidth="300.0" style="-fx-background-color: #01014A;" text=" Moje faktury" textFill="WHITE">
+                     <font>
+                        <Font name="Lato Bold" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onMouseClicked="#logout" prefHeight="80.0" prefWidth="300.0" style="-fx-background-color: #01014A;" text=" Wyloguj" textFill="WHITE">
+                     <font>
+                        <Font name="Lato Bold" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <HBox alignment="BOTTOM_LEFT" VBox.vgrow="ALWAYS">
+                     <children>
+                        <ImageView fitHeight="25.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/585e4bf3cb11b227491c339a.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="usernameLabel" text="Label" textFill="WHITE">
+                           <font>
+                              <Font name="Trebuchet MS" size="19.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <StackPane fx:id="frame" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </children>
+</StackPane>

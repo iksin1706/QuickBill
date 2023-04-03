@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Main-Class: com.quickbill.App
+Class-Path: slf4j-simple-2.0.6.jar javafx-graphics-18-ea+6.jar sqlite-di
+ alect-0.1.2.jar javafx-web-18-ea+6.jar jboss-logging-3.4.2.Final.jar jb
+ oss-transaction-api_1.2_spec-1.1.1.Final.jar layout-7.1.14.jar byte-bud
+ dy-1.11.20.jar bootstrapfx-core-0.4.0.jar bcprov-jdk15on-1.67.jar contr
+ olsfx-11.1.0.jar fontawesomefx-8.9.jar FastInfoset-1.2.15.jar javafx-ba
+ se-18-ea+6-win.jar javafx-media-18-ea+6-win.jar ikonli-javafx-12.2.0.ja
+ r javafx-controls-18-ea+6-win.jar ikonli-core-12.2.0.jar validatorfx-0.
+ 1.13.jar commons-logging-1.2.jar txw2-2.3.1.jar formsfx-core-11.3.2.jar
+  mysql-connector-java-5.0.8.jar antlr-2.7.7.jar classmate-1.5.1.jar ist
+ ack-commons-runtime-3.0.7.jar tilesfx-11.48.jar javax.activation-api-1.
+ 2.0.jar jaxb-api-2.3.1.jar javafx-fxml-18-ea+6.jar hibernate-commons-an
+ notations-5.1.2.Final.jar fontbox-2.0.20.jar kernel-7.1.14.jar jbcrypt-
+ 0.4.jar javafx-base-18-ea+6.jar html2pdf-3.0.3.jar bcpkix-jdk15on-1.67.
+ jar stax-ex-1.8.jar itextpdf-5.5.13.3.jar jandex-2.2.3.Final.jar jaxb-r
+ untime-2.3.1.jar slf4j-api-2.0.0.jar javafx-web-18-ea+6-win.jar javafx-
+ controls-18-ea+6.jar javafx-fxml-18-ea+6-win.jar sqlite-jdbc-3.40.0.0.j
+ ar forms-7.1.14.jar javafx-graphics-18-ea+6-win.jar hibernate-core-5.6.
+ 1.Final.jar pdfbox-2.0.20.jar javax.persistence-api-2.2.jar io-7.1.14.j
+ ar javafx-media-18-ea+6.jar svg-7.1.14.jar styled-xml-parser-7.1.14.jar
+

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane id="background" prefHeight="400.0" prefWidth="1141.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quickbill.controllers.RegisterController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" StackPane.alignment="CENTER">
+         <StackPane.margin>
+            <Insets bottom="100.0" left="200.0" right="200.0" top="100.0" />
+         </StackPane.margin>
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="437.0" prefWidth="650.0" stylesheets="@../style.css" VBox.vgrow="ALWAYS">
+               <children>
+                  <TextField fx:id="loginPrompt" layoutX="206.0" layoutY="123.0" prefHeight="25.0" prefWidth="239.0" promptText="Login" />
+                  <PasswordField fx:id="passwordPrompt1" layoutX="206.0" layoutY="242.0" prefHeight="25.0" prefWidth="239.0" promptText="Password" />
+                  <Label layoutX="206.0" layoutY="100.0" text="Login" textFill="WHITE">
+                     <font>
+                        <Font name="Serif Regular" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="207.0" layoutY="219.0" text="Hasło" textFill="WHITE">
+                     <font>
+                        <Font name="Serif Regular" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="registerUserButton" layoutX="245.0" layoutY="365.0" mnemonicParsing="false" onMouseClicked="#register" prefHeight="30.0" prefWidth="162.0" style="-fx-background-color: #023E8A;" text="Zarejestruj sie" textFill="WHITE">
+                     <font>
+                        <Font name="Lato Semibold" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <PasswordField fx:id="passwordPrompt2" layoutX="206.0" layoutY="302.0" prefHeight="25.0" prefWidth="239.0" promptText="Password" />
+                  <Label layoutX="206.0" layoutY="279.0" prefHeight="23.0" prefWidth="127.0" text="Powtórz hasło" textFill="WHITE">
+                     <font>
+                        <Font name="Serif Regular" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="emailPrompt" layoutX="206.0" layoutY="183.0" prefHeight="25.0" prefWidth="239.0" promptText="E-mail" />
+                  <Label layoutX="206.0" layoutY="159.0" text="E-mail" textFill="WHITE">
+                     <font>
+                        <Font name="Serif Regular" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="info" alignment="CENTER" contentDisplay="CENTER" layoutX="163.0" layoutY="337.0" prefHeight="19.0" prefWidth="325.0" style="visibility: false;" text="Błędne hasło" textAlignment="CENTER" textFill="RED">
+                     <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="89.0" fitWidth="372.0" layoutX="140.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/background.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="registerButton" alignment="CENTER" contentDisplay="RIGHT" layoutX="207.0" layoutY="401.0" mnemonicParsing="false" onMouseClicked="#logout" prefHeight="30.0" prefWidth="239.0" style="-fx-background-color: #00000000;" text="Wróć do panelu logowania" textFill="WHITE">
+                     <font>
+                        <Font name="Lato Semibold" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

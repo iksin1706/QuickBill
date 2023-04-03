@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<StackPane id="background" prefHeight="400.0" prefWidth="1050.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quickbill.controllers.LoginController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" StackPane.alignment="CENTER">
+         <StackPane.margin>
+            <Insets bottom="100.0" left="200.0" right="200.0" top="100.0" />
+         </StackPane.margin>
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="437.0" prefWidth="650.0" stylesheets="@../style.css" VBox.vgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="89.0" fitWidth="372.0" layoutX="146.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/background.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="213.0" layoutY="128.0" text="Login/e-mail" textFill="WHITE">
+                     <font>
+                        <Font name="Serif Regular" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="loginPrompt" layoutX="213.0" layoutY="151.0" prefHeight="25.0" prefWidth="239.0" promptText="Login" />
+                  <Label layoutX="216.0" layoutY="190.0" text="Hasło" textFill="WHITE">
+                     <font>
+                        <Font name="Serif Regular" size="20.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="passwordPrompt" layoutX="213.0" layoutY="213.0" prefHeight="25.0" prefWidth="239.0" promptText="Password" />
+                  <Button fx:id="loginButton" layoutX="274.0" layoutY="276.0" mnemonicParsing="false" onMouseClicked="#logIn" prefHeight="30.0" prefWidth="116.0" style="-fx-background-color: #023E8A;" text="Zaloguj sie" textFill="WHITE">
+                     <font>
+                        <Font name="Lato Semibold" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label layoutX="226.0" layoutY="312.0" text="Nie masz konta?" textFill="WHITE">
+                     <font>
+                        <Font name="Serif Regular" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="registerButton" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="328.0" layoutY="306.0" mnemonicParsing="false" onMouseClicked="#signin" prefHeight="30.0" prefWidth="124.0" style="-fx-background-color: #00000000;" text="Zarejestruj sie" textFill="WHITE">
+                     <font>
+                        <Font name="Lato Semibold" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label fx:id="info" alignment="CENTER" contentDisplay="CENTER" layoutX="214.0" layoutY="250.0" prefHeight="19.0" prefWidth="239.0" style="visibility: false;" text="Błędne hasło" textAlignment="CENTER" textFill="RED">
+                     <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</StackPane>
